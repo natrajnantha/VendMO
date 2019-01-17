@@ -1,0 +1,26 @@
+.generalNav {
+    background-color: #38D39F !important;
+}
+
+.generalNav ul {
+    margin-top: 16px;
+    color: #38D39F;
+}
+
+.logo {
+    font-size: 40px;
+    background-color: #38D39F;
+    color: white;
+    margin-top: 5px;
+    padding: 1px 10px;
+    font-weight: bold;
+    letter-spacing: -3px;
+}
+
+.navcolor a {
+    color: white;
+}
+
+.sidebar-sticky ul li a {
+    color: #38D39F !important;
+}

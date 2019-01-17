@@ -1,0 +1,64 @@
+.landingnav a {
+    color: #38D39F;
+    font-size: 20px;
+}
+
+.landingImg {
+    position: relative;
+    margin-top: -20.5px;
+}
+
+.landingform {
+    position: absolute;
+    margin-top: -43px;
+    margin-left: -45px;
+}
+
+.landingbtn {
+    width: 46.29px !important;
+    height: 35.65px !important;
+    margin-top: -152px;
+    margin-left: 55px;
+
+}
+
+.colorlandingbtn {
+    background-color: #FFC107;
+    color: white;
+}
+
+.searchbar {
+    margin-top: -148px;
+    margin-left: 500px;
+    border: none;
+    width: 195px;
+    height: 31px;
+}
+
+.landingline {
+    margin-top: 85px;
+    font-size: 31px;
+}
+
+.landinggreeninfo {
+    background-color: #38D39F;
+    text-align: center;
+    margin-top: 48px;
+    height: 400px;
+}
+
+.landinggreeninfo h3 {
+    margin-top: 44px;
+}
+
+.landinggreeninfo p {
+    margin-top: 40px;
+}
+
+footer {
+    margin-top: 80px;
+}
+
+.copy {
+    margin-top: 20px;
+}

@@ -1,0 +1,17 @@
+.navstyle {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  right: 0;
+  width: 15rem;
+  height: 100%;
+  z-index: -1;
+  min-height: 100vh;
+  /* background: #38d39f; */
+  border-right: 1px solid #38d39f;
+}
+
+.navitemstyle {
+  padding: 10px;
+}

@@ -1,0 +1,7 @@
+.mainstyle {
+  top: 80px;
+  position: absolute;
+  width: calc(100% - 18rem);
+  transition: all 0.3s;
+  right: 0;
+}

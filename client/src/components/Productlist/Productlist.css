@@ -1,0 +1,32 @@
+.card {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  overflow: hidden;
+  height: 300px;
+  width: 350px;
+  margin: 1rem;
+  position: relative;
+}
+
+.card > .img-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+.card > .img-container img {
+  border: 1px solid black;
+  margin-top: 10px;
+  width: 180px;
+  height: 160px;
+}
+
+.prod1 {
+  display: inline-block;
+  border: 0;
+  width: 200px;
+  height: 220px;
+  position: relative;
+}

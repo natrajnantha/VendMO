@@ -1,0 +1,7 @@
+.wrapper {
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  overflow: auto;
+}
