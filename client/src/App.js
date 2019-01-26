@@ -6,6 +6,7 @@ import NoMatch from "./pages/NoMatch";
 import DisplayCart from "./pages/Checkout/DisplayCart";
 import Orders from "./pages/Orders/Orders";
 import OrdersVendor from "./pages/Orders/OrdersVendor";
+import Productadd from "./pages/Products/Productadd";
 
 var localStorageUpdated = false;
 
@@ -149,6 +150,18 @@ class App extends Component {
                 />
               )}
             />
+            <Route
+              exact
+              path="/Productadd"
+              component={() => (
+                <Productadd
+                  signedIn={this.state.signedIn}
+                  signInUser={this.signInUser}
+                  signOutUser={this.signOutUser}
+                  loginUser={this.state.loginUser}
+                />
+              )}
+            />{" "}
             <Route component={NoMatch} />
           </Switch>
         </div>

@@ -60,7 +60,7 @@ class Sidebar extends Component {
           </NavItem>
           {this.props.loginUser.userType === "vendor" ? (
             <NavItem>
-              <NavLink href="#">
+              <NavLink href="/Productadd">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={24}
