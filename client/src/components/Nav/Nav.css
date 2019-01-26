@@ -7,6 +7,10 @@
   color: #38d39f;
 }
 
+.smalllogo {
+  margin-top: 5px; 
+  width: 15%;
+}
 
 .logo {
   font-size: 40px;
@@ -23,5 +27,10 @@
 }
 
 .usercolor {
-  color: white !important;
+ color: #168661  !important;
+}
+
+ul span {
+  display: flex;
+  list-style: none;
 }
