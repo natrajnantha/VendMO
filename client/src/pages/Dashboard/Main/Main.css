@@ -5,3 +5,11 @@
   transition: all 0.3s;
   right: 0;
 }
+
+.btnstyle {
+  width: 42px;
+  height: 40px;
+  position: absolute;
+  margin-left: 184px;
+  top: 18px;
+}

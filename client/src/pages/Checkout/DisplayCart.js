@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Productlist from "../../components/Productlist";
 import { Col, Row, Container } from "../../components/Grid";
 import { withRouter } from "react-router-dom";
-import { Nav } from "../../components/Nav";
-import { Sidebar } from "../../components/Sidebar";
+import Nav from "../../components/Nav";
+import Sidebar from "../../components/Sidebar";
+
 import API from "../../utils/API";
 import API2 from "../../utils/prodAPI";
 import { Table } from "reactstrap";
@@ -16,9 +17,16 @@ class DisplayCart extends Component {
   }
 
   componentWillMount() {
-    this.props.cart.map(availProd => {
-      sum += availProd.price;
-    });
+    const cartdata = localStorage.getItem("cartdata");
+    var tempdata = JSON.parse(cartdata);
+    console.log("SETTING UP LOCAL STATE  " + tempdata.length);
+    console.log(tempdata);
+    if (tempdata.length != 0) {
+      this.setState(JSON.parse(cartdata));
+      this.props.cart.map(availProd => {
+        sum += availProd.price;
+      });
+    }
   }
 
   componentDidMount() {
@@ -31,8 +39,9 @@ class DisplayCart extends Component {
     API2.saveOrder({
       products: this.props.cart,
       customer: {
-        firstName: this.props.loginUser.firstname,
-        lastName: this.props.loginUser.lastname,
+        custid: this.props.loginUser._id,
+        first_name: this.props.loginUser.first_name,
+        last_name: this.props.loginUser.last_name,
         email: this.props.loginUser.email,
         phone: this.props.loginUser.phone,
         address: {
@@ -44,8 +53,8 @@ class DisplayCart extends Component {
         }
       },
       shipping: {
-        firstName: this.props.loginUser.firstname,
-        lastName: this.props.loginUser.lastname,
+        first_name: this.props.loginUser.first_name,
+        last_name: this.props.loginUser.last_name,
         email: this.props.loginUser.email,
         phone: this.props.loginUser.phone,
         address: {
@@ -61,7 +70,10 @@ class DisplayCart extends Component {
     })
       .then(() => {
         console.log("Order saved successfully");
-        this.props.setCart([]);
+        alert("Order saved successfully");
+        this.setState({ cartItemCount: 0, cartitems: [] }, function() {
+          localStorage.setItem("cartdata", JSON.stringify(this.state));
+        });
         sum = 0.0;
       })
       .catch(err => console.log(err));
@@ -70,10 +82,15 @@ class DisplayCart extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav
+          signedIn={this.props.signedIn}
+          signInUser={this.props.signInUser}
+          signOutUser={this.props.signOutUser}
+          loginUser={this.props.loginUser}
+        />
         <div className="container-fluid">
           <div>
-            <Sidebar />
+            <Sidebar loginUser={this.props.loginUser} />
           </div>
           <div className="checkoutstyle">
             <h1 className="h2">Checkout</h1>
@@ -83,6 +100,7 @@ class DisplayCart extends Component {
                 <tr>
                   <th>#</th>
                   <th>Item</th>
+                  <th>Description</th>
                   <th>Price</th>
                 </tr>
               </thead>
@@ -101,7 +119,11 @@ class DisplayCart extends Component {
                             />{" "}
                           </a>
                         </span>
-                        {availProd.desc}
+                      </td>
+                      <td>
+                        {availProd.desc.length > 150
+                          ? availProd.desc.substring(0, 150) + "..."
+                          : availProd.desc}
                       </td>
                       <td>{availProd.price}</td>
                     </tr>
@@ -109,7 +131,7 @@ class DisplayCart extends Component {
                 })}
               </tbody>
             </Table>
-            <div>Total : {sum}</div>
+            <th>Total : {sum}</th>
             <hr />
 
             <div className="row">
@@ -125,8 +147,8 @@ class DisplayCart extends Component {
                     </div>
                     <div className="col-75">
                       <label for="fname">
-                        {this.props.loginUser.firstname}{" "}
-                        {this.props.loginUser.lastname}
+                        {this.props.loginUser.first_name}{" "}
+                        {this.props.loginUser.last_name}
                       </label>
                     </div>
                   </div>
@@ -192,8 +214,8 @@ class DisplayCart extends Component {
                       <input
                         type="text"
                         id="lname"
-                        name="lastname"
-                        value={this.props.loginUser.firstname}
+                        name="last_name"
+                        value={this.props.loginUser.first_name}
                       />
                     </div>
                   </div>
@@ -205,8 +227,8 @@ class DisplayCart extends Component {
                       <input
                         type="text"
                         id="lname"
-                        name="lastname"
-                        value={this.props.loginUser.lastname}
+                        name="last_name"
+                        value={this.props.loginUser.last_name}
                       />
                     </div>
                   </div>
@@ -307,9 +329,9 @@ class DisplayCart extends Component {
                         id="lname"
                         name="cname"
                         value={
-                          this.props.loginUser.firstname +
+                          this.props.loginUser.first_name +
                           " " +
-                          this.props.loginUser.lastname
+                          this.props.loginUser.last_name
                         }
                       />
                     </div>

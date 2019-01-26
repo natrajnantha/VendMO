@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Options from "../../components/Form/Options";
 import API from "../../utils/API";
+import "./Dropdown.css";
 
 class Dropdown extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Dropdown extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ddstyle">
         <select value={this.state.value} onChange={this.handleChange}>
           {this.state.items.map(item => (
             <Options item={item.category} />
