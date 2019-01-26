@@ -115,14 +115,14 @@ class Nav extends Component {
       <div className="container-fluid generalNav">
         <div className="container clearfix">
           <div className="float-left logo">#VendMo</div>
-          <ul className="nav float-right">
+          <ul className="nav float-right d-inline">
             {this.props.signedIn ? (
               <li onClick={this.signOut} className="nav-item navcolor">
                 <span>
                   <a className="nav-link active" href="#">
                     SignOut
                   </a>
-                  <p className="usercolor">{this.props.loginUser.first_name}</p>
+                  <p className="usercolor">{this.props.loginUser.first_name} you are logged in</p>
                 </span>
               </li>
             ) : (
@@ -146,6 +146,7 @@ class Nav extends Component {
               </span>
             )}
           </ul>
+          
           <SignUp
             modal={this.state.signUpModal}
             modalTitle={"Enter in information to sign up"}

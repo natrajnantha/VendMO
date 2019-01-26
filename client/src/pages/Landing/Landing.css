@@ -8,11 +8,16 @@
     margin-top: -20.5px;
 }
 
-.landingform {
-    position: absolute;
-    margin-top: -43px;
-    margin-left: -45px;
+.searchlanding {
+    position: absolute !important;
+    width: 260px !important;
+    margin-top: -240px;
+    margin-left: 398px;
 }
+
+.inputlanding {
+    width: 100px !important;
+  }
 
 .landingbtn {
     width: 46.29px !important;
