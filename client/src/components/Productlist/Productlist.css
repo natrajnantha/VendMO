@@ -2,7 +2,7 @@
   background: #fff;
   /* background: lightcyan; */
   border-radius: 2px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
   text-align: left;
   overflow: hidden;
   height: 300px;
@@ -34,24 +34,26 @@
 
 .avail {
   display: inline-block;
-  margin-left: 6px;
-  color: green;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #168661;
   font-weight: bold;
 }
 
 .indays {
   position: absolute;
-  margin-left: 210px;
+  margin-top: 10px;
+  margin-left: 190px;
   font-weight: bold;
   float: right;
-  color: green;
+  color: #168661;
 }
 
 .desc {
-  margin-top: 3px;
+  margin-top: 10px;
   display: inline-block;
-  margin-left: 6px;
-  color: green;
+  text-align: center;
+  color: #168661;
 }
 
 .cartBtn {

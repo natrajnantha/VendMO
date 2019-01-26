@@ -5,7 +5,7 @@
 }
 
 .checkoutstyle {
-  top: 80px;
+  top: 120px;
   position: absolute;
   width: calc(100% - 18rem);
   transition: all 0.3s;

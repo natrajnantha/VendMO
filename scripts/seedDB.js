@@ -152,34 +152,34 @@ db.Product.remove({})
     process.exit(1);
   });
 
-// const categorySeed = [
-//   {
-//     category: "   "
-//   },
-//   {
-//     category: "Electronics"
-//   },
-//   {
-//     category: "Books"
-//   },
-//   {
-//     category: "Furnitures"
-//   },
-//   {
-//     category: "Produce"
-//   },
-//   {
-//     category: "Posters"
-//   }
-// ];
+const categorySeed = [
+  {
+    category: "   "
+  },
+  {
+    category: "Electronics"
+  },
+  {
+    category: "Books"
+  },
+  {
+    category: "Furnitures"
+  },
+  {
+    category: "Produce"
+  },
+  {
+    category: "Posters"
+  }
+];
 
-// db.ProductCategory.remove({})
-//   .then(() => db.ProductCategory.collection.insertMany(categorySeed))
-//   .then(data => {
-//     console.log(data.result.n + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+db.ProductCategory.remove({})
+  .then(() => db.ProductCategory.collection.insertMany(categorySeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });

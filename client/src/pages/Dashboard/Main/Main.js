@@ -126,7 +126,7 @@ class Main extends Component {
   render() {
     return (
       <div className="mainstyle col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <div className="maintop d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 className="h2">Shop</h1>
           <div className="btn-toolbar mb-4 mb-md-0">
             <Input id="title" name="title" placeholder="Search" />
@@ -138,14 +138,14 @@ class Main extends Component {
               <i class="fas fa-search" />
             </button>
           </div>
+          <div>
+            <Dropdown processDropdown={this.processDropdown} />
+          </div>
           <div className="btn-toolbar mb-4 mb-md-0">
             <Cart
               displayCart={this.displayCart}
               cartcount={this.state.cartItemCount}
             />
-          </div>
-          <div>
-            <Dropdown processDropdown={this.processDropdown} />
           </div>
         </div>
         <Row>

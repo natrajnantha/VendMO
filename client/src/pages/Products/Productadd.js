@@ -72,7 +72,7 @@ class Productadd extends Component {
           <div className="checkoutstyle">
             <h1 className="h2">Add Product</h1>
 
-            <div className="row">
+            <div className="row addrow">
               <div className="product-container">
                 <form>
                   <div className="row">

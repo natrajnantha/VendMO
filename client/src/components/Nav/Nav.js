@@ -113,40 +113,44 @@ class Nav extends Component {
   render() {
     return (
       <div className="container-fluid generalNav">
+      <div className="row">
         <div className="container clearfix">
           <div className="float-left logo">#VendMo</div>
-          <ul className="nav float-right d-inline">
+          <ul className="nav float-right">
             {this.props.signedIn ? (
-              <li onClick={this.signOut} className="nav-item navcolor">
                 <span>
+              <li onClick={this.signOut} className="nav-item navcolor d-inline">
                   <a className="nav-link active" href="#">
                     SignOut
                   </a>
-                  <p className="usercolor">{this.props.loginUser.first_name} you are logged in</p>
-                </span>
               </li>
+              <li className="d-inline">
+                <p className="usercolor">{this.props.loginUser.first_name} you are logged in</p>
+                
+                </li>
+                </span>
             ) : (
-              <span>
-                <li
-                  onClick={this.toggleSignInModal}
-                  className="nav-item navcolor"
-                >
-                  <a className="nav-link active" href="#">
-                    Sign In
+                <span>
+                  <li
+                    onClick={this.toggleSignInModal}
+                    className="nav-item navcolor d-inline"
+                  >
+                    <a className="nav-link active" href="#">
+                      Sign In
                   </a>
-                </li>
-                <li
-                  onClick={this.toggleSignUpModal}
-                  className="nav-item navcolor"
-                >
-                  <a className="nav-link active" href="#">
-                    Register
+                  </li>
+                  <li
+                    onClick={this.toggleSignUpModal}
+                    className="nav-item navcolor d-inline"
+                  >
+                    <a className="nav-link active" href="#">
+                      Register
                   </a>
-                </li>
-              </span>
-            )}
+                  </li>
+                </span>
+              )}
           </ul>
-          
+
           <SignUp
             modal={this.state.signUpModal}
             modalTitle={"Enter in information to sign up"}
@@ -177,6 +181,7 @@ class Nav extends Component {
             inputHandler={this.inputHandler}
             signIn={this.signIn}
           />
+        </div>
         </div>
       </div>
     );

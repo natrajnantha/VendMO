@@ -5,11 +5,22 @@
 }
 
 .checkoutstyle {
-  top: 80px;
   position: absolute;
   width: calc(100% - 18rem);
   transition: all 0.3s;
   right: 0;
+  padding-right: 20px;
+  color: #168661;
+}
+
+.checkoutstyle h1 {
+  color: #FFC107;
+}
+
+.addrow {
+  width: 150% !important;
+  margin-top: 80px;
+  margin-left: 20%;
 }
 
 * {
@@ -76,7 +87,12 @@ input[type="submit"]:hover {
   width: 30%;
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid green;
   margin-left: 10px;
 }
+
+.col-75 input {
+  width: 300px;
+}
+
