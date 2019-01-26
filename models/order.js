@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const orderSchema = new Schema({
   products: { type: Array, required: true },
   customer: {
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    custid: { type: String, required: true },
+    first_name: { type: String, required: true },
+    last_name: { type: String, required: true },
     email: { type: String, required: true },
     phone: { type: String, required: true },
     address: {
@@ -17,8 +18,8 @@ const orderSchema = new Schema({
     }
   },
   shipping: {
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    first_name: { type: String, required: true },
+    last_name: { type: String, required: true },
     email: { type: String, required: true },
     phone: { type: String, required: true },
     address: {

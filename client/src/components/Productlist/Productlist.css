@@ -1,5 +1,6 @@
 .card {
   background: #fff;
+  /* background: lightcyan; */
   border-radius: 2px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
@@ -29,4 +30,32 @@
   width: 200px;
   height: 220px;
   position: relative;
+}
+
+.avail {
+  display: inline-block;
+  margin-left: 6px;
+  color: green;
+  font-weight: bold;
+}
+
+.indays {
+  position: absolute;
+  margin-left: 210px;
+  font-weight: bold;
+  float: right;
+  color: green;
+}
+
+.desc {
+  margin-top: 3px;
+  display: inline-block;
+  margin-left: 6px;
+  color: green;
+}
+
+.cartBtn {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
