@@ -14,8 +14,6 @@ margin-right: 10px;
   width: 15rem;
   height: 100%;
   z-index: -1;
-  min-height: 100vh;
-  border-right: 1px solid #38d39f;
   font-size: 24px;
   color: #D35638;
 }

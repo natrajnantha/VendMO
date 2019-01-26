@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import { Button } from "reactstrap";
 import userAPI from "../../utils/user";
 import "./Nav.css";
+import smalllogo from "./smalllogo.svg";
 
 class Nav extends Component {
   constructor(props) {
@@ -115,7 +116,12 @@ class Nav extends Component {
       <div className="container-fluid generalNav">
       <div className="row">
         <div className="container clearfix">
-          <div className="float-left logo">#VendMo</div>
+          <img
+            className="smalllogo float-left"
+            src={smalllogo}
+            alt="smalllogo"
+            srcSet
+          />
           <ul className="nav float-right">
             {this.props.signedIn ? (
                 <span>
@@ -124,9 +130,9 @@ class Nav extends Component {
                     SignOut
                   </a>
               </li>
-              <li className="d-inline">
-                <p className="usercolor">{this.props.loginUser.first_name} you are logged in</p>
-                
+              <li className="nnav-item navcolor d-inline">
+                {/* <a className="usercolor">{this.props.loginUser.first_name}, you are logged in</a> */}
+                <a className="nav-link active usercolor" href="#">{this.props.loginUser.first_name} is logged in</a>
                 </li>
                 </span>
             ) : (

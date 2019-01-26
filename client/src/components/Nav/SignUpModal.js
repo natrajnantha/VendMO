@@ -35,7 +35,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="username"
+                placeholder="Username"
                 name="username"
                 value={props.username}
                 onChange={props.inputHandler}
@@ -44,7 +44,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="usertype"
+                placeholder="Vendor or Customer"
                 name="userType"
                 value={props.userType}
                 onChange={props.inputHandler}
@@ -53,7 +53,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="password"
+                placeholder="Password"
                 type="password"
                 name="password"
                 value={props.password}
@@ -63,7 +63,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="email"
+                placeholder="E-mail"
                 type="email"
                 name="email"
                 value={props.email}
@@ -73,7 +73,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="Phone"
+                placeholder="Phone Number"
                 name="phone"
                 value={props.phone}
                 onChange={props.inputHandler}
@@ -82,7 +82,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="first_name"
+                placeholder="First Name"
                 type="first_name"
                 name="first_name"
                 value={props.first_name}
@@ -92,7 +92,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="last_name"
+                placeholder="Last Name"
                 type="last_name"
                 name="last_name"
                 value={props.last_name}
@@ -103,7 +103,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="House number"
+                placeholder="House Number"
                 name="number"
                 value={props.number}
                 onChange={props.inputHandler}
@@ -112,7 +112,7 @@ const SignUp = props => (
             <InputGroup>
               <InputGroupAddon addonType="prepend">@</InputGroupAddon>
               <Input
-                placeholder="Street"
+                placeholder="Street Name"
                 name="street"
                 value={props.street}
                 onChange={props.inputHandler}
