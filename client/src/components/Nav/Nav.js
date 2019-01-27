@@ -127,12 +127,12 @@ class Nav extends Component {
                 <span>
               <li onClick={this.signOut} className="nav-item navcolor d-inline">
                   <a className="nav-link active" href="#">
-                    SignOut
+                    Sign Out
                   </a>
               </li>
               <li className="nnav-item navcolor d-inline">
                 {/* <a className="usercolor">{this.props.loginUser.first_name}, you are logged in</a> */}
-                <a className="nav-link active usercolor" href="#">{this.props.loginUser.first_name} is logged in</a>
+                <a className="nav-link active usercolor"><span className="navfontclolor d-inline">{this.props.loginUser.first_name}</span> is logged in as a <span className="navfontclolor d-inline">{this.props.loginUser.userType}</span></a>
                 </li>
                 </span>
             ) : (

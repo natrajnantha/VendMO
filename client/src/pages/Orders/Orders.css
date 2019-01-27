@@ -85,6 +85,6 @@ input[type="submit"]:hover {
 .chartstyle {
   width: 40%;
   margin: auto;
-  border: 3px solid #73ad21;
+  /* border: 3px solid #73ad21; */
   padding-left: 120px;
 }

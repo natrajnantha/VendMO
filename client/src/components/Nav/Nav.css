@@ -27,10 +27,14 @@
 }
 
 .usercolor {
- color: #168661  !important;
+ color: #16533F  !important;
 }
 
 ul span {
   display: flex;
   list-style: none;
+}
+
+.navfontclolor {
+  font-weight: bold;
 }

@@ -132,7 +132,7 @@ class Main extends Component {
             <Input id="title" name="title" placeholder="Search" />
 
             <button
-              className="btn-success btnstyle mb-4 mb-md-0"
+              className="btn-success btnstyle mb-4 mb-md-0 topbtn"
               onClick={this.handleSearchSubmit}
             >
               <i class="fas fa-search" />
@@ -143,6 +143,7 @@ class Main extends Component {
           </div>
           <div className="btn-toolbar mb-4 mb-md-0">
             <Cart
+            className="topbtn"
               displayCart={this.displayCart}
               cartcount={this.state.cartItemCount}
             />
